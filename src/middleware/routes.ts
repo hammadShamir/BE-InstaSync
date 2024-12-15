@@ -1,5 +1,5 @@
 import auth from "../app/auth/route";
-
-const routes = [auth];
+import profile from '../app/profile/route';
+const routes = [auth, profile];
 
 export default routes;

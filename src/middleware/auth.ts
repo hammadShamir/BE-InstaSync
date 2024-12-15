@@ -28,10 +28,11 @@ export const authMiddleware = asyncHandler(
       email: user.email,
       fullName: user.fullName,
       role: user.role,
+      access_token: user.access_token,
     };
 
     res.locals.cognitoUser = cognitoUserPayload;
 
-    await next();
+    next();
   }
 );

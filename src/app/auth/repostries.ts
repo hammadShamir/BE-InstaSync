@@ -15,3 +15,10 @@ export const getUser = async (payload: Partial<User>) => {
   const user = await userRepository.findOne(options);
   return user;
 };
+
+export const updateUser = async (
+  condition: Partial<User>,
+  payload: Partial<User>
+) => {
+  return await userRepository.update(condition, payload);
+};

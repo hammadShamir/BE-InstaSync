@@ -1,6 +1,7 @@
 export interface ICognitoUser {
-  id?: number;
+  id?: string;
   role: string;
   email: string;
   fullName: string;
+  access_token?: string;
 }
